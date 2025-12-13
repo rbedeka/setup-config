@@ -1,0 +1,18 @@
+[init]
+        defaultBranch = main
+[rerere]
+        enabled = true
+        autoupdate = true
+[core]
+        pager = delta
+[delta]
+        navigate = true
+        side-by-side = false
+        line-numbers = true
+        syntax-theme = OneHalfDark
+[pull]
+        rebase = true
+[rebase]
+        autoStash = true
+[fetch]
+        prune = true
