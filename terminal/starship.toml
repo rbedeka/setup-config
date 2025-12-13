@@ -1,0 +1,42 @@
+# ~/.config/starship.toml
+
+add_newline = false
+command_timeout = 500
+
+format = "$directory\n$git_branch$character"
+
+[directory]
+truncate_to_repo = true
+truncation_length = 3
+style = "bold blue"
+
+[git_branch]
+symbol = ""
+format = "[$branch](green)"
+
+[character]
+success_symbol = "[❯](white)"
+error_symbol   = "[❯](red)"
+
+# ─────────────────────────────────────────────
+# OPTIONAL: Git dirty state (future toggle)
+#
+# Purpose:
+# - Subtle signal in terminal-only workflows
+# - No symbols, no duplication with VS Code
+# - Branch turns yellow when working tree is dirty
+#
+# Cost:
+# - Requires git status check on prompt redraw
+# - ~2–6ms in typical repos, more in large monorepos
+#
+# Enable only if you spend significant time
+# working outside an editor.
+# ─────────────────────────────────────────────
+
+# [git_status]
+# format = ""
+# style = "yellow"
+#
+# [git_branch]
+# format = "[$branch]($style)"

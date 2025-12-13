@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Zsh
+.zsh_history
+.zcompdump*
+.zsh_sessions
+
+# Oh My Zsh caches
+oh-my-zsh/cache/
+
+# Starship cache (if ever created)
+.starship/
+
+# Secrets
+.env
+.env.*
