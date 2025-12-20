@@ -12,3 +12,10 @@ torada() {
   ./start-tor-browser.desktop
   cd ~
 }
+
+alias c='wl-copy'
+alias p='wl-paste'
+alias ll='ls -lah --color=auto'
+alias cat='bat'
+alias grep='rg'
+alias cls='clear'

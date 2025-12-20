@@ -7,8 +7,10 @@ ZSH_THEME=""
 
 plugins=(
   git
+	docker
   sudo
-  zsh-autosuggestions
+	postgres  
+	zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -22,3 +24,4 @@ source $ZSH/oh-my-zsh.sh
 
 
 # zprof
+
