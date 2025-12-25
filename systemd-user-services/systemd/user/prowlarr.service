@@ -17,7 +17,7 @@ Restart=on-failure
 RestartSec=5
 
 # Resource safety (same philosophy as Sonarr)
-Nice=15
+NNNice=15
 NoNewPrivileges=true
 
 IOSchedulingClass=best-effort

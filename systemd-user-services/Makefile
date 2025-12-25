@@ -25,4 +25,4 @@ status:
 	systemctl --user status sonarr radarr prowlarr qbittorrent-nox
 
 lint:
-	systemd-analyze verify systemd/user/*.service systemd/user/*.service.d/*.conf
+	systemd-analyze verify --user systemd/user/*.service

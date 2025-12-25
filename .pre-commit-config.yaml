@@ -3,6 +3,6 @@ repos:
     hooks:
       - id: systemd-unit-verify
         name: Validate systemd unit files
-        entry: systemd-analyze verify
+        entry: systemd-analyze verify --user
         language: system
         files: ^systemd/user/.*\.(service|conf)$
