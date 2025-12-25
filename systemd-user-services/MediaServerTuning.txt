@@ -1,0 +1,32 @@
+
+===================================================================
+//                  Reverse GC NET Tuning
+===================================================================
+
+rm -rf ~/.config/systemd/user/{sonarr,radarr,prowlarr}.service.d
+systemctl --user daemon-reload
+systemctl --user restart sonarr radarr prowlarr
+
+
+
+===================================================================
+//                  Reverse Scheduler / IO Tuning
+===================================================================
+nano ~/.config/systemd/user/{sonarr,radarr,prowlarr}
+
+
+
+
+
+===================================================================
+//                  Reverse Disk Spindown
+===================================================================
+
+sudo nano /etc/udev/rules.d/69-hdparm.rules
+
+## Monitor
+sudo smartctl -A /dev/sda | grep Load_Cycle_Count
+
+
+
+

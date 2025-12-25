@@ -4,7 +4,8 @@
 
 alias pn=pnpm
 alias upgrade='sudo dnf update -y && sudo dnf autoremove -y'
-alias boot_log="$HOME/Utilities/mesaure_boot.sh"
+alias boot_audit="$HOME/Utilities/mesaure_boot.sh"
+alias net_audit="$HOME/Utilities/network-audit.sh"
 
 # Tor browser launcher (function > alias)
 torada() {
