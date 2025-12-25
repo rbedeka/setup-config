@@ -1,0 +1,30 @@
+[Unit]
+Description=Prowlarr (User Service)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# IMPORTANT: match manual run
+ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/prowlarr/Prowlarr.dll
+
+# Match Sonarr behaviour
+UMask=002
+WorkingDirectory=%h
+
+Restart=on-failure
+RestartSec=5
+
+# Resource safety (same philosophy as Sonarr)
+Nice=15
+NoNewPrivileges=true
+
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

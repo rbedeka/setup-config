@@ -15,3 +15,13 @@ oh-my-zsh/cache/
 # Secrets
 .env
 .env.*
+
+# systemd runtime state (DO NOT TRACK)
+default.target.wants/
+*.wants/
+*.requires/
+*.d/*.swp
+
+# editor junk
+*~
+*.bak

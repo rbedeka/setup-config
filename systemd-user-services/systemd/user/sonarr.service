@@ -1,0 +1,32 @@
+[Unit]
+Description=Sonarr (User Service)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# IMPORTANT: match your manual run
+ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/sonarr/Sonarr.dll
+UMask=002
+
+# Ensure Sonarr finds its config & DB
+WorkingDirectory=%h
+
+# Restart on crash
+Restart=on-failure
+RestartSec=5
+
+# Resource safety (lightweight)
+Nice=10
+NoNewPrivileges=true
+
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

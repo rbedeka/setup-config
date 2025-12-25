@@ -1,0 +1,27 @@
+[Unit]
+Description=Radarr (User Service)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/radarr/Radarr.dll
+
+UMask=002
+WorkingDirectory=%h
+
+Restart=on-failure
+RestartSec=5
+
+Nice=10
+NoNewPrivileges=true
+
+StandardOutput=journal
+StandardError=journal
+
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=default.target

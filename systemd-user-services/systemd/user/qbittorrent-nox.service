@@ -1,0 +1,21 @@
+[Unit]
+Description=qBittorrent-nox (User)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/qbittorrent-nox \
+  --profile=%h/.config/qBittorrent-nox \
+  --webui-port=8080
+
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=1048576
+
+Nice=15
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+
+[Install]
+WantedBy=default.target

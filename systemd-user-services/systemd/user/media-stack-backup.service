@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup media stack configs
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/backup-media-stack.sh
