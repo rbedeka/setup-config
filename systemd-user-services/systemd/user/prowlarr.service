@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 
 # IMPORTANT: match manual run
-ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/prowlarr/Prowlarr.dll
+ExecStart=/usr/lib64/dotnet/dotnet /opt/prowlarr/Prowlarr.dll
 
 # Match Sonarr behaviour
 UMask=002

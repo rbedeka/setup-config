@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 
 # IMPORTANT: match your manual run
-ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/sonarr/Sonarr.dll
+ExecStart=/usr/lib64/dotnet/dotnet /opt/sonarr/Sonarr.dll
 UMask=002
 
 # Ensure Sonarr finds its config & DB

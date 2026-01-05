@@ -1,5 +1,5 @@
 # History
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$HOME/.local/state/zsh/history"
 HISTSIZE=10000
 SAVEHIST=10000
 

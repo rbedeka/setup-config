@@ -1,19 +1,23 @@
+# ~/.oh-my-zsh/custom/path.zsh
+
 typeset -U path
-
 path=(
-
-# User Bins
+  # User Bins
   $HOME/.local/bin
   $HOME/bin
-# Bun
-  $HOME/.bun/bin
-# pnpm
+
+  # Bun (corrected path)
+  $HOME/.local/share/bun/bin
+
+  # pnpm
   $HOME/.local/share/pnpm
-# Cargo
-  $HOME/.cargo/bin
-# Opencode
+
+  # Cargo
+  $HOME/.local/share/cargo/bin
+
+  # Opencode
   $HOME/.opencode/bin
 
+  # Keep existing system paths
   $path
 )
-

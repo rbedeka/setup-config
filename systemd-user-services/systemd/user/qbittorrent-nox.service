@@ -11,11 +11,11 @@ ExecStart=/usr/bin/qbittorrent-nox \
 Restart=on-failure
 RestartSec=5
 LimitNOFILE=1048576
+NoNewPrivileges=true
 
 Nice=15
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
-
 
 [Install]
 WantedBy=default.target

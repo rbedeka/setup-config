@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 
-ExecStart=/usr/lib64/dotnet/dotnet %h/Apps/radarr/Radarr.dll
+ExecStart=/usr/lib64/dotnet/dotnet /opt/radarr/Radarr.dll
 
 UMask=002
 WorkingDirectory=%h

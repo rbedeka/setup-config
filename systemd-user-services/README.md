@@ -7,6 +7,12 @@ This repo contains systemd *user* service definitions for:
 - Prowlarr
 - qBittorrent-nox
 
+## Backup instructions
+
+cp -a ~/.config/systemd/user/*.service systemd/user/
+cp -a ~/.config/systemd/user/*.service.d systemd/user/
+
+
 ## Restore instructions
 
 ```bash
